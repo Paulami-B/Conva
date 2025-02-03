@@ -1,11 +1,12 @@
 import { useState } from "react";
-import Icon from "../../components/Icon";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
-import GoogleAuth from "../../components/GoogleAuth";
+import Icon from "../components/Icon";
+import GoogleAuth from "../components/GoogleAuth";
+import SignUp from "../components/SignUp";
+import SignIn from "../components/SignIn";
 
 export default function Auth() {
     const [activeTab, setActiveTab] = useState<'signup' | 'signin'>('signup');
+    
     return (
         <div className="grid grid-cols-3 lg:grid-cols-5 px-12 py-5 gap-5 h-screen w-screen items-center bg-linear-65 from-cyan-400 via-blue-600 to-indigo-900">
             <div className="col-span-3 w-full h-full rounded-l-3xl shadow-lg dark:shadow-2xl dark:shadow-cyan-200 py-5 px-12 bg-white dark:bg-black">
@@ -46,3 +47,4 @@ export default function Auth() {
         </div>
     )
 }
+
