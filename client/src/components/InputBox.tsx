@@ -2,16 +2,15 @@ import React from 'react'
 
 type InputBoxProps = {
     type: 'text' | 'email',
-    required: boolean,
     name: string,
     label: string,
     onChange: React.ChangeEventHandler<HTMLInputElement>
 }
 
-export default function InputBox({type, required, name, label, onChange}: InputBoxProps) {
+export default function InputBox({type, name, label, onChange}: InputBoxProps) {
     return (
         <div className="relative py-2">
-            <input name={name} type={type} required={required} 
+            <input name={name} type={type} required 
             className="block p-2 pt-3 dark:text-gray-200 w-full bg-transparent rounded-lg border-1 border-gray-400 appearance-none 
             focus:outline-none focus:ring-0 focus:border-indigo-700 dark:focus:border-cyan-400 peer" placeholder=" " onChange={onChange} />
             <label className="absolute text-gray-500 dark:text-gray-300 duration-300 transform -translate-y-4 scale-75 bg-white 
